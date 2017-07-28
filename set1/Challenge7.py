@@ -27,8 +27,7 @@ def main():
 	filename = "challenge-data/7.txt"
 	key = "YELLOW SUBMARINE"
 
-	buffer = open(filename).read()
-        ciphertext = base64.b64decode(buffer)
+	ciphertext = open(filename).read()
 	plaintext = AES_ECB_decrypt(ciphertext, key)
 
 	print plaintext
